@@ -1,5 +1,7 @@
 import s from './style.module.css';
 
+
+
 const Layout = ({ id, title, urlBg, colorBg, children }) => {
     const rootUrlBg = urlBg ? { backgroundImage: `url('${urlBg}')` } : {};
     const rootColor = colorBg ? { backgroundColor: colorBg } : {};
