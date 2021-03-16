@@ -1,5 +1,3 @@
-
-@import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
 *,
 *::before,
 *::after,
@@ -9,9 +7,9 @@
   box-sizing: border-box;
 }
 
+@import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -20,7 +18,6 @@ body {
   background: #fafafa;
   font-size: 62.5%;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
-
   overflow-x: hidden;
 }
 
