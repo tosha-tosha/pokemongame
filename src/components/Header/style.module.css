@@ -75,7 +75,12 @@
         right: 25%;
     }
 }
-
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .container h1 {
     font-size: 65px;
     font-weight: normal;

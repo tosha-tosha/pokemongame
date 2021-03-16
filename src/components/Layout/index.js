@@ -19,7 +19,6 @@ const Layout = ({ id, title, urlBg, colorBg, children }) => {
                 </article>
             </div>
         </section>
-
     );
 };
 

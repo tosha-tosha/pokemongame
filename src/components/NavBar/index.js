@@ -13,8 +13,7 @@ const Navbar = ({isMenuActive, changeMenuActive}) => {
                 </p>
                 <a
                     className={cn(s.menuButton, {[s.active]: isMenuActive})}
-                    onClick={handleMenuButtonClick}
-                >
+                    onClick={handleMenuButtonClick}>
                     <span/>
                 </a>
             </div>

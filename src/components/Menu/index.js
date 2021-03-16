@@ -5,6 +5,7 @@ const Menu = ({isActive}) => {
     return (
         <div className={cn(s.menuContainer, isActive ? s.active : s.deactive)}>
             <div className={s.overlay}/>
+            <div className={s.menuItems}/>
             <div>
                 <ul>
                     <li>
