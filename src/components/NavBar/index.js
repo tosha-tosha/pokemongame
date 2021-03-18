@@ -11,12 +11,20 @@ const Navbar = ({ isOpen, bgActive , onClickHamburg }) => {
                 <p className={s.brand}>
                     POKEMONGAME
                 </p>
+<<<<<<< HEAD
                 <div className={cn(s.menuButton, {
                     [s.active]: isOpen === true,
                     [s.deactive]: isOpen === false
                 })} onClick={onClickHamburg}>
                     <span />
             </div>
+=======
+                <a
+                    className={cn(s.menuButton, {[s.active]: isMenuActive})}
+                    onClick={handleMenuButtonClick}>
+                    <span/>
+                </a>
+>>>>>>> 5a0f7070e3255ce417412db28ad6917c7d23bc19
             </div>
         </nav>
     );
