@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+
+.wrap {
+  min-height: calc(100vh - 100px);
+  padding: 96px 32px 24px;
+}
+
+.wrap.isHomePage {
+  padding: 0;
+}
+=======
+>>>>>>> 5a0f7070e3255ce417412db28ad6917c7d23bc19
 .flex {
   display: flex;
   justify-content: center;

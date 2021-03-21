@@ -1,10 +1,15 @@
+<<<<<<< HEAD
+=======
 import './style.module.css';
 import MenuHeader from '../../components/MenuHeader';
+>>>>>>> 5a0f7070e3255ce417412db28ad6917c7d23bc19
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Layout from '../../components/Layout';
+import bgImage1 from '../../assets/bg1.jpg';
 import bgImage2 from '../../assets/bg2.jpg';
 import bgImage3 from "../../assets/bg3.jpg";
+<<<<<<< HEAD
+=======
 import PokemonCard from '../../components/PokemonCard';
 import s from './style.module.css'
 
@@ -144,39 +149,55 @@ const POKEMONS = [
     }
 ];
 
+>>>>>>> 5a0f7070e3255ce417412db28ad6917c7d23bc19
 
 const HomePage = ({onChangePage}) => {
     const handleClickButton = (page) =>{
-        console.log('####:<HomePage/>')
+
         onChangePage && onChangePage(page);
 
     }
     return (
         <>
-            <MenuHeader />
+
             <Header
                 title="Pokemon Game"
                 descr="This is simple triple triad card game"
                 onClickButton={handleClickButton}
             />
-            <Layout id="rules" title="Rules of the Game" urlBg={bgImage2} colorBg="">
-                <p>In the game two players face off against one another, one side playing as "blue", the other as "red" on a 3x3 grid.<br/>Each player has five cards in a hand and the aim is to capture the opponent's cards by turning them into the player's own color of red or blue.</p>
-                <p>To win, a majority of the total ten cards played (including the one card that is not placed on the board) must be of the player's card color. To do this, the player must capture cards by placing a card adjacent to an opponent's card whereupon the 'ranks' of the sides where the two cards touch will be compared. If the rank of the opponent's card is higher than the player's card, the player's card will be captured and turned into the opponent's color. If the player's rank is higher, the opponent's card will be captured and changed into the player's color instead. </p>
+            <Layout
+                title="Game"
+                id="game"
+                urlBg={bgImage2}
+            >
+                <p>In the game two players face off against one another, one side playing as "blue", the other as 	"red" on a 3x3 grid.<br/> Each player has five cards in a hand and the aim is to capture the opponent's cards by turning them into the player's own color of red or blue.</p>
+                <p>To win, a majority of the total ten cards played (including the one card that is not placed on the board) must be of the player's card color. To do this, the player must capture cards by placing a card adjacent to an opponent's card whereupon the 'ranks' of the sides where the two cards touch will be compared. If the rank of the opponent's card is higher than the player's card, the player's card will be captured and turned into the opponent's color. If the player's rank is higher, the opponent's card will be captured and changed into the player's color instead.</p>
             </Layout>
+<<<<<<< HEAD
+            <Layout
+                title="About"
+                id="about"
+                urlBg={bgImage1}
+                colorBg=""
+            >
+
+=======
             <Layout id="cards" title="Cards" allign="flex-row" urlBg={bgImage2} colorBg="#202736" >
                 <div className={s.flex}>
                     {POKEMONS.map(item => (
                         <PokemonCard key={item.id} name={item.name} img={item.img} id={item.id} type={item.type} values={item.values} />
                     ))}
                 </div>
+>>>>>>> 5a0f7070e3255ce417412db28ad6917c7d23bc19
             </Layout>
             <Layout
-                id={3}
-                title="Третий layout"
-                descr="передать картинку"
-                bgImage={bgImage3}
-            />
-            <Footer/>
+                title="Contact"
+                descr="Description Third Layout"
+                id="contact"
+                urlBg={bgImage3}
+            >
+
+            </Layout>
         </>
     );
 }
