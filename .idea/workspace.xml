@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="076668c5-aed3-4c02-9c69-91f1b441d3bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/service/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/style.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/style.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

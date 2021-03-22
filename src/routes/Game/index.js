@@ -2,8 +2,9 @@ import {useState, useEffect} from 'react';
 import PokemonCard from '../../components/PokemonCard';
 import Layout from '../../components/Layout'
 import database from "../../service/firebase";
+import bg1 from "../../assets/bg1.jpg"
 import s from './style.module.css';
-import bgImage1 from "../../assets/bg1.jpg";
+
 
 
 const GamePage = () => {
@@ -27,7 +28,7 @@ const GamePage = () => {
             acc[item[0]] = pokemon;
             return acc;
         }, {});
-        database.ref('pokemons/').set({...newBase});
+        database.ref('pokemons/').set({...newBase}).then(() => setPokemons(newBase) );
 
         setPokemons(newBase);
     };
@@ -37,7 +38,7 @@ const GamePage = () => {
         const newPokemons = Object.entries(pokemons).reduce((acc, item) => {
             const pokemon = {...item[1]};
             if (pokemon.id === 25) {
-                database.ref('pokemons/' + newKey).set(pokemon);
+                database.ref('pokemons/' + newKey).set(pokemon).then(() => setPokemons(newPokemons) );
                 acc[newKey] = pokemon;
             }
             acc[item[0]] = pokemon;
@@ -51,9 +52,8 @@ const GamePage = () => {
         <>
             <Layout title="Game"
                     id="game"
-                    urlBg={bgImage1}
-            >
-                <div className={s.wrapper}>
+                    urlBg={bg1}>
+                <div className={s.flex}>
                     <button className={s.button} onClick={handleAddPokemon} >
                         Add new Pokemon
                     </button>

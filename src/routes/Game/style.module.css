@@ -1,18 +1,28 @@
+.button {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    border-radius: 10px;
+    background: #d8d1da;
+    color: rgb(12, 11, 11);
+    padding: 8px 16px;
+    font-size: 16px;
+}
+.button:hover {
+    appearance: none;
+    border: 0;
+
+    border-radius: 10px;
+
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    background: #7f0b96;
+}
 .flex {
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-}
-
-
-.button {
-    background-color: #f300b4;
-    border: none;
-    color: purple;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 60px;
 }
