@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="076668c5-aed3-4c02-9c69-91f1b441d3bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/context/firebaseContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/pokemonContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pokemonsdb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Board/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Board/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Finish/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Finish/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Start/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Start/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616420777333</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="homework6v2">
+      <created>1616423757802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616423757802</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

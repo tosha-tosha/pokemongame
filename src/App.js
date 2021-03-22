@@ -1,50 +1,51 @@
-import {useRouteMatch, Route, Switch, Redirect} from "react-router-dom";
+import { Route, Switch, useLocation, Redirect } from 'react-router-dom';
 import cn from 'classnames';
 
-import HomePage from "./routes/Home";
-import GamePage from "./routes/Game";
-import AboutPage from "./routes/About";
-import ContactPage from "./routes/Contact";
-import NotFoundPage from "./routes/NotFound";
-import MenuHeader from "./components/MenuHeader";
-import Footer from "./components/Footer";
+import style from './style.module.css';
+import { FirebaseContext } from './context/firebaseContext';
+import Firebase from './service/firebase';
 
-
-
-import s from './style.module.css';
-
+import MenuHeader from './components/MenuHeader';
+import Footer from './components/Footer';
+import AboutPage from './routes/About';
+import ContactPage from './routes/Contact';
+import GamePage from './routes/Game';
+import HomePage from './routes/Home';
+import NotFoundPage from './routes/NotFound';
 
 
 const App = () => {
-  const match = useRouteMatch('/');
-  console.log('####: ', match)
+  const location = useLocation();
+  const isPadding = location.pathname === '/' || location.pathname === '/game/board';
+
   return (
-      <Switch>
-        <Route path="/404" component={NotFoundPage}/>
-        <Route>
-          <>
-            <MenuHeader bgActive={!match.isExact}/>
-            <div className={cn(s.wrap, {
-              [s.isHomePage]: match.isExact
-            })}>
-              <Switch>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/home" component={HomePage} />
-                <Route path="/game" component={GamePage} />
-                <Route path="/about" component={AboutPage}/>
-                <Route path="/contact" component={ContactPage}/>
-                <Route render={() =>(
-                    <Redirect to="/404"/>
-                )}/>
-              </Switch>
-            </div>
-            <Footer/>
-          </>
-        </Route>
+      <FirebaseContext.Provider value={new Firebase()}>
+        <Switch>
+          <Route path="/404" component={NotFoundPage} />
+          <Route>
+            <>
+              <MenuHeader bgActive={!isPadding}/>
+              <div className={cn(style.wrap, {[style.isHomePage]: isPadding})}>
+                <Switch>
+                  <Route path="/" exact
+                         render={() => (<Redirect to="/home" />)}
+                  />
+                  <Route path="/about" component={AboutPage} />
+                  <Route path="/contact" component={ContactPage} />
+                  <Route path="/game" component={GamePage} />
+                  <Route path="/home" component={HomePage} />
 
-
-      </Switch>
+                  <Route render={() => (
+                      <Redirect to="/404" />
+                  )} />
+                </Switch>
+              </div>
+              <Footer/>
+            </>
+          </Route>
+        </Switch>
+      </FirebaseContext.Provider>
   )
-};
+}
 
 export default App;

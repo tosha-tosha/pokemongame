@@ -4,6 +4,8 @@ import bgImage1 from '../../assets/bg1.jpg';
 import bgImage2 from '../../assets/bg2.jpg';
 import bgImage3 from "../../assets/bg3.jpg";
 
+
+
 const HomePage = ({onChangePage}) => {
     const handleClickButton = (page) =>{
 
