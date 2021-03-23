@@ -8,7 +8,7 @@ import Header from '../../../../components/Header';
 import Layout from '../../../../components/Layout';
 import PokemonCard from '../../../../components/PokemonCard';
 
-import style from './style.module.css';
+import s from './style.module.css';
 import {FirebaseContext} from "../../../../context/firebaseContext";
 import {PokemonContext} from "../../../../context/pokemonContext";
 
@@ -54,7 +54,7 @@ const StartPage = () => {
                 urlBg={Bg3}
             >
                 <button onClick={handleClickStartGame}>Start game</button>
-                <div className={cn(style.flex)}>
+                <div className={cn(s.flex)}>
                     {
                         Object.entries(cardState).map(([key, {name, img, id, type, values, selected}]) =>
                             <PokemonCard
@@ -71,7 +71,7 @@ const StartPage = () => {
                                 }}
                                 isActive={true}
                                 isSelected={selected}
-                                className={style.card}
+                                className={s.card}
                             />)
                     }
                 </div>

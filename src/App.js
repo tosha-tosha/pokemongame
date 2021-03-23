@@ -1,7 +1,7 @@
 import { Route, Switch, useLocation, Redirect } from 'react-router-dom';
 import cn from 'classnames';
 
-import style from './style.module.css';
+import s from './style.module.css';
 import { FirebaseContext } from './context/firebaseContext';
 import Firebase from './service/firebase';
 
@@ -25,7 +25,7 @@ const App = () => {
           <Route>
             <>
               <MenuHeader bgActive={!isPadding}/>
-              <div className={cn(style.wrap, {[style.isHomePage]: isPadding})}>
+              <div className={cn(s.wrap, {[s.isHomePage]: isPadding})}>
                 <Switch>
                   <Route path="/" exact
                          render={() => (<Redirect to="/home" />)}

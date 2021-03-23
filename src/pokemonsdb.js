@@ -1,4 +1,4 @@
-export const POKEMONS = [
+export const pokemons = [
     {
         abilities: ["keen-eye", "tangled-feet", "big-pecks"],
         stats: {

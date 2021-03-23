@@ -1,11 +1,7 @@
-import s from './style.module.css';
-
-const FinishPage = () => {
+const Finish = () => {
     return (
-        <div className={s.root}>
-            <p>Game over</p>
-        </div>
-    );
-};
+        <div>Game Over</div>
+    )
+}
 
-export default FinishPage;
+export default Finish;
