@@ -1,8 +1,12 @@
 .flex {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 50px;
-    grid-row-gap: 40px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+}
+
+.buttonWrap {
+    text-align: center;
+    padding: 2rem;
 }
 
 .card {

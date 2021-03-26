@@ -2,7 +2,7 @@ import { Route, Switch, useLocation, Redirect } from 'react-router-dom';
 import cn from 'classnames';
 
 import s from './style.module.css';
-import { FirebaseContext } from './context/firebaseContext';
+import { FireBaseContext } from './context/firebaseContext';
 import Firebase from './service/firebase';
 
 import MenuHeader from './components/MenuHeader';
@@ -19,7 +19,7 @@ const App = () => {
   const isPadding = location.pathname === '/' || location.pathname === '/game/board';
 
   return (
-      <FirebaseContext.Provider value={new Firebase()}>
+      <FireBaseContext.Provider value={new Firebase()}>
         <Switch>
           <Route path="/404" component={NotFoundPage} />
           <Route>
@@ -44,7 +44,7 @@ const App = () => {
             </>
           </Route>
         </Switch>
-      </FirebaseContext.Provider>
+      </FireBaseContext.Provider>
   )
 }
 

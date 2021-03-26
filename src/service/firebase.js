@@ -12,21 +12,21 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-class Firebase {
+class FireBase {
     constructor() {
         this.fire = firebase;
         this.database = this.fire.database();
     }
 
     // Получение/обновление данных по сокету (при любом изменении данных)
-    getPokemonsSoket = (cb) => {
+    getPokemonSoket = (cb) => {
         this.database.ref('pokemons')
             .on('value' , (snapshot) => {
                 cb(snapshot.val());
             })
     }
 
-    offPokemonsSoket = () => {
+    offPokemonSoket = () => {
         this.database.ref('pokemons').off();
     }
 
@@ -49,4 +49,4 @@ class Firebase {
     }
 }
 
-export default Firebase;
+export default FireBase;

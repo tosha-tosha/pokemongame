@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="076668c5-aed3-4c02-9c69-91f1b441d3bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/node_modules/@babel/types/lib/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Board/component/PlayerBoard/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/Game/routes/Board/component/PlayerBoard/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/pokemonContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/pokemonContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pokemonsdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pokemonsdb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/firebaseContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/firebaseContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/routes/Board/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/routes/Board/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Game/routes/Board/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/routes/Board/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/routes/Finish/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/routes/Finish/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Game/routes/Finish/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/routes/Finish/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Game/routes/Start/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/routes/Start/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Game/routes/Start/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Game/routes/Start/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +35,16 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/tosha-tosha/pokemongame" />
+      </set>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1psQBY3bOaFMjfWaP2cBuCoeEDV" />
   <component name="ProjectViewState">

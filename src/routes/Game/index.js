@@ -1,53 +1,56 @@
-import { useRouteMatch, Route, Switch } from 'react-router-dom';
+import { useRouteMatch, Switch, Route } from 'react-router-dom';
+
+import StartPage from './routes/Start';
+import BoardPage from './routes/Board';
+import FinishPage from './routes/Finish';
+import { PokemonContext } from '../../context/pokemonContext';
 import { useState } from 'react';
-import StartPage from '../Game/routes/Start';
-import BoardPage from '../Game/routes/Board';
-import FinishPage from '../Game/routes/Finish';
-
-import {PokemonContext} from "../../context/pokemonContext";
-
 
 const GamePage = () => {
+    const [selectedPokemons, setSelectedPokemons] = useState({});
+    const [cardPlayer2, setCardPlayer2] = useState({});
 
+    const match = useRouteMatch();
 
-    const [pokemons, setSelected] = useState({});
-    const  match  =  useRouteMatch ( '/game' )
-    const selectPokemon = (key, pokemon) => {
-        setSelected(prevState => {
+    const handleSelectedPokemons = (key, pokemon) => {
+        setSelectedPokemons(prevState => {
             if (prevState[key]) {
-                const copyState = { ...prevState };
+                const copyState = {...prevState};
                 delete copyState[key];
 
-                return copyState
+                return copyState;
             }
-            return ({
+
+            return {
                 ...prevState,
                 [key]: pokemon
+            }
+        })
+    }
 
-            });
-        });
-    };
+    const setCards = (player2) => {
+        setCardPlayer2(player2);
+    }
 
-    const dischargeContext = () => {
-        setSelected({});
-
+    const clearContext = () => {
+        setSelectedPokemons({});
     }
 
     return (
-
         <PokemonContext.Provider value={{
-            pokemons: pokemons,
-            selectPokemon: selectPokemon,
-            dischargeContext: dischargeContext,
-        }} >
+            pokemons: selectedPokemons,
+            onSelectedPokemons: handleSelectedPokemons,
+            setCardPlayer: setCards,
+            player2: cardPlayer2,
+            clearContext: clearContext
+        }}>
             <Switch>
                 <Route path={`${match.path}/`} exact component={StartPage} />
                 <Route path={`${match.path}/board`} component={BoardPage} />
                 <Route path={`${match.path}/finish`} component={FinishPage} />
             </Switch>
         </PokemonContext.Provider>
-    )
-}
-
+    );
+};
 
 export default GamePage;

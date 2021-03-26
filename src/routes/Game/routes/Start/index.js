@@ -1,39 +1,32 @@
 import { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import cn from 'classnames';
-
-import Bg3 from '../../../../assets/bg3.jpg';
-
-import Header from '../../../../components/Header';
-import Layout from '../../../../components/Layout';
-import PokemonCard from '../../../../components/PokemonCard';
+import {FireBaseContext} from "../../../../context/firebaseContext";
+import { PokemonContext } from '../../../../context/pokemonContext';
+import PokemonCard from './../../../../components/PokemonCard';
 
 import s from './style.module.css';
-import {FirebaseContext} from "../../../../context/firebaseContext";
-import {PokemonContext} from "../../../../context/pokemonContext";
-
+import Layout from "../../../../components/Layout";
 
 const StartPage = () => {
-    const firebase = useContext(FirebaseContext);
-    const selectedCard = useContext(PokemonContext);
-    const [cardState, setCardState] = useState({});
+
+    const firebase = useContext(FireBaseContext);
+    const pokemonsContext = useContext(PokemonContext);
     const history = useHistory();
-    const handleClickHome = () => history.push('/home');
-    const handleClickStartGame = () => history.push('/game/board');
+    const [pokemons, setPokemons] = useState({});
 
     useEffect(() => {
-        firebase.getPokemonsSoket((cards) => {
-            setCardState(cards)
+        firebase.getPokemonSoket((pokemons) => {
+            setPokemons(pokemons);
         });
 
-        return () => firebase.offPokemonsSoket();
+        return () => firebase.offPokemonSoket();
     }, []);
 
     const handleChangeSelected = (key) => {
-        const pokemons = {...cardState[key]};
-        selectedCard.onSelectedPokemons(key, pokemons);
+        const pokemon = {...pokemons[key]};
+        pokemonsContext.onSelectedPokemons(key, pokemon);
 
-        setCardState(prevState => ({
+        setPokemons(prevState => ({
             ...prevState,
             [key]: {
                 ...prevState[key],
@@ -42,39 +35,44 @@ const StartPage = () => {
         }))
     }
 
+    const handleStartGameClick = () => {
+        history.push('/game/board');
+    }
+
     return (
         <>
-            <Header title='This is game page !!!'>
-                <button onClick={handleClickHome}>Go to Homepage</button>
-            </Header>
-            <Layout
-                id='1'
-                title='Мои игровые карточки'
-                colorBg='#74E1FF'
-                urlBg={Bg3}
-            >
-                <button onClick={handleClickStartGame}>Start game</button>
-                <div className={cn(s.flex)}>
-                    {
-                        Object.entries(cardState).map(([key, {name, img, id, type, values, selected}]) =>
-                            <PokemonCard
-                                key={key}
-                                id={id}
-                                name={name}
-                                type={type}
-                                img={img}
-                                values={values}
-                                handleSelectCard={() => {
-                                    if (Object.keys(selectedCard.pokemons).length < 5 || selected) {
-                                        handleChangeSelected(key)
-                                    }
-                                }}
-                                isActive={true}
-                                isSelected={selected}
-                                className={s.card}
-                            />)
-                    }
-                </div>
+            <Layout>
+
+            <div className={s.buttonWrap}>
+                <button
+                    onClick={handleStartGameClick}
+                    disabled={Object.keys(pokemonsContext.pokemons).length < 5}
+                >
+                    Start Game
+                </button>
+            </div>
+            <div className={s.flex}>
+                {
+                    Object.entries(pokemons).map(([key, {name, img, id, type, values, selected}]) => (
+                        <PokemonCard
+                            className={s.card}
+                            key={key}
+                            name={name}
+                            img={img}
+                            id={id}
+                            type={type}
+                            values={values}
+                            isActive={true}
+                            isSelected={selected}
+                            onClickCard={() => {
+                                if (Object.keys(pokemonsContext.pokemons).length < 5 || selected) {
+                                    handleChangeSelected(key)
+                                }
+                            }}
+                        />
+                    ))
+                }
+            </div>
             </Layout>
         </>
     );
